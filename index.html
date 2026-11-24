@@ -1,0 +1,1331 @@
+``
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القلعة الخضراء - تنظيم الكرنفالات والاحتفالات في السودان</title>
+    
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="شركة القلعة الخضراء لتنظيم الكرنفالات والاحتفالات والزفات الملكية وحفلات التخريج في السودان. زفتك علينا من نزلتك من العربية لحدي جدعتك للفال.">
+    <meta name="keywords" content="القلعة الخضراء, تنظيم مناسبات السودان, زفة عرسان, حفلات تخريج, ضيافة, الخرطوم, بورتسودان">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandGreen: {
+                            DEFAULT: '#0B6429', // Exact Deep Emerald Green from Logo
+                            deep: '#07481D',
+                            light: '#0E7A33',
+                            soft: '#E8F3EC',
+                        },
+                        brandCream: {
+                            DEFAULT: '#F6F1E6', // Warm Ivory/Cream from Logo
+                            dark: '#EAE1D0',
+                            light: '#FAF7F0',
+                        },
+                        brandGold: {
+                            DEFAULT: '#C59B27',
+                            dark: '#A37E1C',
+                            light: '#E5C058',
+                            soft: '#FCF8EC',
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'brand': '0 10px 30px -10px rgba(11, 100, 41, 0.25)',
+                        'gold-glow': '0 0 25px -5px rgba(197, 155, 39, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+            background-color: #FAF7F0;
+            color: #1A2E22;
+            overflow-x: hidden;
+        }
+
+        /* Subtle Ornamental Pattern */
+        .bg-pattern {
+            background-color: #FAF7F0;
+            background-image: radial-gradient(#0B6429 0.75px, transparent 0.75px), radial-gradient(#C59B27 0.75px, #FAF7F0 0.75px);
+            background-size: 32px 32px;
+            background-position: 0 0, 16px 16px;
+        }
+
+        .gold-text {
+            background: linear-gradient(135deg, #A37E1C 0%, #C59B27 50%, #E5C058 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .green-gradient-bg {
+            background: linear-gradient(145deg, #07481D 0%, #0B6429 60%, #042D12 100%);
+        }
+
+        .gold-border {
+            border: 1px solid rgba(197, 155, 39, 0.35);
+        }
+
+        /* Pulse Ring for Floating CTA */
+        @keyframes ringPulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(11, 100, 41, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 16px rgba(11, 100, 41, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(11, 100, 41, 0); }
+        }
+        .pulse-ring {
+            animation: ringPulse 2s infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F6F1E6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0B6429;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C59B27;
+        }
+
+        /* Gallery Hover Zoom Effect */
+        .gallery-img-container img {
+            transition: transform 0.5s ease;
+        }
+        .gallery-img-container:hover img {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brandGold selection:text-white">
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 transform -translate-y-20 opacity-0 transition-all duration-300 ease-out bg-brandGreen-deep text-brandGold-light px-6 py-3 rounded-full shadow-2xl border border-brandGold/40 flex items-center gap-3 text-sm font-bold pointer-events-none">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-lg" id="toast-icon"></i>
+        <span id="toast-message">تمت العملية بنجاح!</span>
+    </div>
+
+    <!-- Lightbox Modal for Full-Screen Image Viewing -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex-col items-center justify-between p-4 sm:p-8 transition-opacity duration-300">
+        <!-- Top Toolbar -->
+        <div class="w-full max-w-5xl flex items-center justify-between text-white z-10">
+            <span id="lightbox-counter" class="text-xs sm:text-sm font-mono text-brandGold font-bold">1 / 10</span>
+            <div class="flex items-center gap-4">
+                <span id="lightbox-caption" class="text-xs sm:text-sm font-bold text-gray-200 hidden sm:inline">لقطة من أعمال القلعة الخضراء</span>
+                <button onclick="closeLightbox()" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl transition-colors" title="إغلاق">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Center Image View -->
+        <div class="relative w-full max-w-4xl h-[70vh] flex items-center justify-center my-auto overflow-hidden">
+            <img id="lightbox-img" src="" alt="عرض مكبر" class="max-w-full max-h-full object-contain rounded-xl shadow-2xl transition-all duration-300">
+            
+            <!-- Previous Button -->
+            <button onclick="prevLightboxImg()" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-brandGreen-deep/80 text-brandGold border border-brandGold/40 hover:bg-brandGreen flex items-center justify-center text-xl shadow-lg transition-colors" title="الصورة السابقة">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Next Button -->
+            <button onclick="nextLightboxImg()" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-brandGreen-deep/80 text-brandGold border border-brandGold/40 hover:bg-brandGreen flex items-center justify-center text-xl shadow-lg transition-colors" title="الصورة التالية">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+        </div>
+
+        <!-- Bottom Actions -->
+        <div class="w-full max-w-xl flex items-center justify-center gap-4 pt-2">
+            <a id="lightbox-wa-btn" href="https://wa.me/249909373837" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-2.5 rounded-full text-xs flex items-center gap-2 shadow-lg transition-colors">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span>اطلب تنظيم مثل هذا العرض</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-brandGreen-deep/95 backdrop-blur-md border-b border-brandGold/30 text-white transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo Badge -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-brandCream rounded-full p-1 shadow-md border-2 border-brandGold flex items-center justify-center transition-transform group-hover:scale-105 overflow-hidden">
+                        <img src="354907.jpg" alt="القلعة الخضراء" class="w-full h-full object-contain rounded-full" onerror="this.classList.add('hidden'); document.getElementById('nav-svg-logo').classList.remove('hidden');">
+                        
+                        <!-- Precision Green SVG Emblem -->
+                        <svg id="nav-svg-logo" class="hidden w-full h-full" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="300" rx="150" fill="#F6F1E6"/>
+                            <path d="M75 80 L78 92 L90 95 L78 98 L75 110 L72 98 L60 95 L72 92 Z" fill="#0B6429"/>
+                            <path d="M105 105 L107 113 L115 115 L107 117 L105 125 L103 117 L95 115 L103 113 Z" fill="#0B6429"/>
+                            <path d="M225 80 L228 92 L240 95 L228 98 L225 110 L222 98 L210 95 L222 92 Z" fill="#0B6429"/>
+                            <path d="M195 105 L197 113 L205 115 L197 117 L195 125 L193 117 L185 115 L193 113 Z" fill="#0B6429"/>
+                            <path d="M150 40 V 80 M150 40 L 175 52 L 150 64 Z" fill="#0B6429" stroke="#0B6429" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M70 190 V 125 H 85 V 135 H 100 V 125 H 115 V 135 H 130 V 105 H 143 V 115 H 157 V 105 H 170 V 135 H 185 V 125 H 200 V 135 H 215 V 125 H 230 V 190 Z" fill="#0B6429"/>
+                            <path d="M150 120 C 143 120 143 135 143 135 H 157 C 157 135 157 120 150 120 Z" fill="#F6F1E6"/>
+                            <path d="M100 148 C 95 148 95 160 95 160 H 105 C 105 160 105 148 100 148 Z" fill="#F6F1E6"/>
+                            <path d="M200 148 C 195 148 195 160 195 160 H 205 C 205 160 205 148 200 148 Z" fill="#F6F1E6"/>
+                            <path d="M150 162 C 140 162 140 190 140 190 H 160 C 160 190 160 162 150 162 Z" fill="#F6F1E6"/>
+                            <path d="M50 195 C 90 175, 120 220, 150 200 C 180 220, 210 175, 250 195 C 215 235, 175 220, 150 240 C 125 220, 85 235, 50 195 Z" fill="#0B6429"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="flex flex-col">
+                        <span class="text-xl sm:text-2xl font-black tracking-wide text-white group-hover:text-brandGold transition-colors">القلعة الخضراء</span>
+                        <span class="text-[11px] text-brandGold-light font-bold tracking-tight">تنظيم الكرنفالات والاحتفالات</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-6 font-bold text-sm">
+                    <a href="#home" class="hover:text-brandGold transition-colors py-2 border-b-2 border-transparent hover:border-brandGold">الرئيسية</a>
+                    <a href="#services" class="hover:text-brandGold transition-colors py-2 border-b-2 border-transparent hover:border-brandGold">خدماتنا وعروضنا</a>
+                    <a href="#gallery" class="hover:text-brandGold transition-colors py-2 border-b-2 border-transparent hover:border-brandGold">معرض الصور Live</a>
+                    <a href="#portfolio" class="hover:text-brandGold transition-colors py-2 border-b-2 border-transparent hover:border-brandGold">منشورات فيسبوك</a>
+                    <a href="#booking" class="hover:text-brandGold transition-colors py-2 border-b-2 border-transparent hover:border-brandGold">احجز الآن</a>
+                    <a href="#contact" class="hover:text-brandGold transition-colors py-2 border-b-2 border-transparent hover:border-brandGold">تواصل معنا</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="https://wa.me/249909373837?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A7%D9%84%D9%82%D9%84%D8%B9%D8%A9%20%D8%A7%D9%84%D8%AE%D8%B6%D8%B1%D8%A7%D8%A1%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AD%D8%AC%D8%B2%20%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1" 
+                       target="_blank" 
+                       rel="noopener"
+                       class="bg-gradient-to-r from-brandGold via-brandGold-light to-brandGold-dark hover:from-brandGold-dark hover:to-brandGold text-brandGreen-deep font-black px-5 py-2.5 rounded-full shadow-lg hover:shadow-gold-glow transition-all transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>احجز عبر واتساب</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="قائمة التنقل" class="md:hidden text-brandGold hover:text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brandGreen-deep border-b border-brandGold/20 px-4 pt-3 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block px-3 py-2 rounded-md text-base font-bold text-white hover:bg-brandGreen hover:text-brandGold">الرئيسية</a>
+            <a href="#services" class="mobile-link block px-3 py-2 rounded-md text-base font-bold text-white hover:bg-brandGreen hover:text-brandGold">خدماتنا وعروضنا</a>
+            <a href="#gallery" class="mobile-link block px-3 py-2 rounded-md text-base font-bold text-white hover:bg-brandGreen hover:text-brandGold">معرض الصور Live</a>
+            <a href="#portfolio" class="mobile-link block px-3 py-2 rounded-md text-base font-bold text-white hover:bg-brandGreen hover:text-brandGold">منشورات فيسبوك</a>
+            <a href="#booking" class="mobile-link block px-3 py-2 rounded-md text-base font-bold text-white hover:bg-brandGreen hover:text-brandGold">احجز الآن</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-bold text-white hover:bg-brandGreen hover:text-brandGold">تواصل معنا</a>
+            <div class="pt-3 border-t border-brandGreen/60 flex flex-col gap-2">
+                <a href="https://wa.me/249909373837" target="_blank" class="w-full bg-brandGold text-brandGreen-deep text-center font-black py-2.5 rounded-lg flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>تواصل واتساب: 0909373837</span>
+                </a>
+                <a href="tel:+249117562966" class="w-full bg-brandGreen text-white text-center font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 border border-brandGold/30">
+                    <i class="fa-solid fa-phone text-lg"></i>
+                    <span>اتصال تلفوني: 0117562966</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Body Sections -->
+    <main id="home">
+        
+        <!-- Hero Section -->
+        <section class="relative min-h-[90vh] green-gradient-bg text-white overflow-hidden flex items-center py-16 lg:py-24">
+            
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brandGold/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-brandGreen-light/20 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Column Text -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+                        
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brandGreen-deep/90 border border-brandGold/40 text-brandGold-light text-xs sm:text-sm font-bold">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                            <span>✨ الحجوزات فاتحة الآن لجميع الفعاليات والمناسبات</span>
+                        </div>
+
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight text-white tracking-tight">
+                            زفتك علينا.. <br>
+                            <span class="gold-text">من نزلتك من العربية لحدي جدعتك للفال!</span>
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-brandCream-light font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            وبعروض ولا في الأحلام.. شركتنا تقدم ليك تنظيماً ملوكياً ودخوليات استعراضية ولا فيها أي أغلاط. وللخريجين عروض خاصة مع أفكار بتتدهشك في كافة أنحاء السودان!
+                        </p>
+
+                        <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs sm:text-sm font-bold">
+                            <div class="flex items-center gap-2 bg-brandGreen-deep/80 px-3.5 py-2 rounded-xl border border-brandGold/25">
+                                <i class="fa-solid fa-crown text-brandGold"></i>
+                                <span>دخوليات ملوكية واستقبال فخم</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-brandGreen-deep/80 px-3.5 py-2 rounded-xl border border-brandGold/25">
+                                <i class="fa-solid fa-graduation-cap text-brandGold"></i>
+                                <span>أفكار تدهشك للخريجين</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-brandGreen-deep/80 px-3.5 py-2 rounded-xl border border-brandGold/25">
+                                <i class="fa-solid fa-users text-brandGold"></i>
+                                <span>فريق ضيافة احترافي بزي موحد</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="https://wa.me/249909373837?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A7%D9%84%D9%82%D9%84%D8%B9%D8%A9%20%D8%A7%D9%84%D8%AE%D8%B6%D8%B1%D8%A7%D8%A1%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9%20%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B6" 
+                               target="_blank" 
+                               class="w-full sm:w-auto bg-gradient-to-r from-brandGold via-brandGold-light to-brandGold-dark hover:from-brandGold-dark hover:to-brandGold text-brandGreen-deep font-black text-lg px-8 py-4 rounded-full shadow-2xl hover:shadow-gold-glow transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                <span>احجز مناسبتك الآن عبر واتساب</span>
+                            </a>
+                            
+                            <a href="#gallery" 
+                               class="w-full sm:w-auto bg-brandGreen-deep/90 hover:bg-brandGreen text-white font-bold text-base px-6 py-4 rounded-full border border-brandGold/40 hover:border-brandGold transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-camera text-brandGold"></i>
+                                <span>استعرض صور التقديم والديكور</span>
+                            </a>
+                        </div>
+
+                        <div class="pt-6 border-t border-brandGreen-light/30 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-brandGold-light">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-phone text-brandGold"></i>
+                                <span class="text-white font-bold">اتصل بنا:</span>
+                                <a href="tel:+249117562966" class="hover:underline font-mono text-brandGold font-extrabold dir-ltr">0117562966</a>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                                <span class="text-white font-bold">الواتساب:</span>
+                                <a href="https://wa.me/249909373837" target="_blank" class="hover:underline font-mono text-brandGold font-extrabold dir-ltr">0909373837</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column Logo Card -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-brandGold to-brandGreen-light rounded-3xl blur-lg opacity-50 animate-pulse"></div>
+                            
+                            <div class="relative bg-brandCream rounded-3xl p-8 shadow-2xl border-2 border-brandGold text-brandGreen-deep text-center flex flex-col items-center">
+                                
+                                <div class="w-56 h-56 sm:w-64 sm:h-64 rounded-2xl bg-brandCream p-2 shadow-inner border-4 border-brandGreen flex items-center justify-center relative overflow-hidden group">
+                                    <img src="354907.jpg" alt="القلعة الخضراء" class="w-full h-full object-contain" onerror="this.classList.add('hidden'); document.getElementById('hero-svg-logo').classList.remove('hidden');">
+                                    
+                                    <svg id="hero-svg-logo" class="hidden w-full h-full" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="500" height="500" fill="#F6F1E6"/>
+                                        <path d="M150 110 L154 130 L174 134 L154 138 L150 158 L146 138 L126 134 L146 130 Z" fill="#0B6429"/>
+                                        <path d="M110 160 L113 175 L128 178 L113 181 L110 196 L107 181 L92 178 L107 175 Z" fill="#0B6429"/>
+                                        <path d="M350 110 L354 130 L374 134 L354 138 L350 158 L346 138 L326 134 L346 130 Z" fill="#0B6429"/>
+                                        <path d="M390 160 L393 175 L408 178 L393 181 L390 196 L387 181 L372 178 L387 175 Z" fill="#0B6429"/>
+                                        <path d="M250 60 V 130 M250 60 L 295 80 L 250 100 Z" fill="#0B6429" stroke="#0B6429" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M120 310 V 190 H 145 V 205 H 170 V 190 H 195 V 205 H 220 V 160 H 240 V 175 H 260 V 160 H 280 V 205 H 305 V 190 H 330 V 205 H 355 V 190 H 380 V 310 Z" fill="#0B6429"/>
+                                        <path d="M250 185 C 238 185 238 210 238 210 H 262 C 262 210 262 185 250 185 Z" fill="#F6F1E6"/>
+                                        <path d="M160 225 C 150 225 150 245 150 245 H 170 C 170 245 170 225 160 225 Z" fill="#F6F1E6"/>
+                                        <path d="M340 225 C 330 225 330 245 330 245 H 350 C 350 245 350 225 340 225 Z" fill="#F6F1E6"/>
+                                        <path d="M250 245 C 230 245 230 310 230 310 H 270 C 270 310 270 245 250 245 Z" fill="#F6F1E6"/>
+                                        <path d="M80 315 C 140 280, 190 355, 250 325 C 310 355, 360 280, 420 315 C 370 380, 290 350, 250 390 C 210 350, 130 380, 80 315 Z" fill="#0B6429"/>
+                                        <text x="250" y="435" font-family="'Cairo', sans-serif" font-weight="900" font-size="44" fill="#0B6429" text-anchor="middle">القلعة الخضراء</text>
+                                        <text x="250" y="475" font-family="'Tajawal', sans-serif" font-weight="700" font-size="22" fill="#0B6429" text-anchor="middle">تنظيم الكرنفالات والاحتفالات</text>
+                                    </svg>
+                                </div>
+
+                                <div class="mt-4 w-full bg-brandGreen text-white rounded-2xl p-4 text-sm space-y-2 text-right shadow-md">
+                                    <div class="flex items-center gap-2 text-brandGold font-bold">
+                                        <i class="fa-solid fa-star"></i>
+                                        <span>فخامة التنظيم والضيافة الملوكية</span>
+                                    </div>
+                                    <p class="text-xs text-brandCream-light font-light leading-relaxed">
+                                        نُشرف على جميع ترتيبات الضيافة، الكوشة، والكرنفالات بأعلى معايير الجودة والاحترافية.
+                                    </p>
+                                </div>
+
+                                <button onclick="scrollToBooking()" class="mt-4 w-full bg-brandGreen-deep hover:bg-brandGreen text-brandGold font-extrabold py-3 rounded-xl transition-colors text-sm flex items-center justify-center gap-2 border border-brandGold/40">
+                                    <i class="fa-solid fa-calendar-check text-brandGold"></i>
+                                    <span>اضغط هنا لتأكيد حجزك الآن</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-pattern relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brandGreen font-black text-xs uppercase tracking-widest bg-brandCream px-4 py-1.5 rounded-full border border-brandGold/40">خدماتنا وعروضنا الحصرية</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-brandGreen-deep mt-4 mb-4">خدمات تنظيم احترافية متكاملة</h2>
+                    <p class="text-gray-600 text-base">نلبي جميع تطلعاتكم ونحول لياليكم إلى ذكريات ملوكية ساحرة بأفكار متجددة وبدون أي خطأ.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Service 1 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-xl gold-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-16 h-16 rounded-2xl bg-brandGreen text-brandGold flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-brandGold group-hover:text-brandGreen-deep transition-colors">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+                            <h3 class="text-xl font-black text-brandGreen-deep mb-3">الزفة الملكية والأعراس</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                زفتك علينا من نزلتك من العربية لحدي جدعتك للفال! تنظيم استعراضي ودخوليات أسطورية تجعل ليلة العمر استثنائية.
+                            </p>
+                            <ul class="text-xs text-brandGreen space-y-2.5 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGold"></i> استقبال ملكي وممرات مضيئة</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGold"></i> فرق زفة واستعراض احترافية</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGold"></i> إشراف ميداني دقيق وسلس</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/249909373837?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%B9%D8%B1%D8%B0%20%D8%A7%D9%84%D8%B2%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D9%84%D9%83%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9" target="_blank" class="w-full py-3 rounded-xl bg-brandCream text-brandGreen-deep font-black text-xs text-center border border-brandGold/30 group-hover:bg-brandGreen group-hover:text-brandGold transition-colors flex items-center justify-center gap-2">
+                            <span>احجز هذا العرض عبر واتساب</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-xl gold-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group relative overflow-hidden">
+                        <div class="absolute top-3 left-3 bg-brandGold text-brandGreen-deep font-black text-[10px] px-3 py-1 rounded-full shadow">عروض الخريجين</div>
+                        <div>
+                            <div class="w-16 h-16 rounded-2xl bg-brandGreen text-brandGold flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-brandGold group-hover:text-brandGreen-deep transition-colors">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="text-xl font-black text-brandGreen-deep mb-3">عروض الخريجين الاستثنائية</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                وللخريجين عروض خاصة مع أفكار بتتدهشك! نصمم حفل التخريج بأفكار مبتكرة ودخوليات حماسية تناسب فرحة السنين.
+                            </p>
+                            <ul class="text-xs text-brandGreen space-y-2.5 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGold"></i> أفكار دخوليات حصرية للدفعة</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGold"></i> تنظيم مسيرة التخرج الكاملة</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGold"></i> خصومات خاصة للكليات والدفعات</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/249909373837?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%8B%20%D8%B9%D8%B1%D9%88%D8%B6%20%D9%88%D8%A3%D9%81%D9%83%D8%A7%D8%B1%20%D8%AD%D9%81%D9%82%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AE%D8%B1%D9%8A%D8%AC%D9%8A%D9%86" target="_blank" class="w-full py-3 rounded-xl bg-brandCream text-brandGreen-deep font-black text-xs text-center border border-brandGold/30 group-hover:bg-brandGreen group-hover:text-brandGold transition-colors flex items-center justify-center gap-2">
+                            <span>احجز عرض الخريجين عبر واتساب</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-xl gold-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-16 h-16 rounded-2xl bg-brandGreen text-brandGold flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-brandGold group-hover:text-brandGreen-deep transition-colors">
+                                <i class="fa-solid fa-tray"></i>
+                            </div>
+                            <h3 class="text-xl font-black text-brandGreen-deep mb-3">فريق الضيافة والتقديم</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                تقديم الوجبات والضيافة السودانية الأصيلة والمشروبات بكادر شاب مدرب، زي موحد أنيق، ونظافة تامة.
+                            </p>
+                            <ul class="text-xs text-brandGreen space-y-2.5 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGold"></i> فريق شاب بزي موحد وشعار الشركة</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGold"></i> سرعة وتنسيق عالي في تقديم الوجبات</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGold"></i> أدوات ضيافة وقفازات معقمة</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/249909373837?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D9%81%D8%B1%D9%8A%D9%82%20%D8%A7%D9%84%D8%B6%D9%8A%D8%A7%D9%81%D8%A9%20%D9%88%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%8A%D9%85" target="_blank" class="w-full py-3 rounded-xl bg-brandCream text-brandGreen-deep font-black text-xs text-center border border-brandGold/30 group-hover:bg-brandGreen group-hover:text-brandGold transition-colors flex items-center justify-center gap-2">
+                            <span>احجز فريق الضيافة عبر واتساب</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-xl gold-border hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-16 h-16 rounded-2xl bg-brandGreen text-brandGold flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-brandGold group-hover:text-brandGreen-deep transition-colors">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                            <h3 class="text-xl font-black text-brandGreen-deep mb-3">تجهيز القاعات والديكورات</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                تصميم الكوشات والمداخل، الإضاءات الذكية والشاشات، وإعداد الجلسات الشعبية والجرتق السوداني.
+                            </p>
+                            <ul class="text-xs text-brandGreen space-y-2.5 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGold"></i> تصميم كوشة مخصصة وإضاءات ساحرة</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGold"></i> تجهيز جلسات الجرتق والديكورات</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGold"></i> هندسة صوتية وضبط الإضاءة</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/249909373837?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AA%D8%AC%D9%87%D9%8A%D8%B2%20%D8%A7%D9%84%D8%AF%D9%8A%D9%83%D9%88%D8%B1%20%D9%88%D8%A7%D9%84%D9%83%D9%88%D8%B4%D8%A9" target="_blank" class="w-full py-3 rounded-xl bg-brandCream text-brandGreen-deep font-black text-xs text-center border border-brandGold/30 group-hover:bg-brandGreen group-hover:text-brandGold transition-colors flex items-center justify-center gap-2">
+                            <span>احجز تجهيز الديكور عبر واتساب</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Photo Gallery Section (#gallery) -->
+        <section id="gallery" class="py-20 bg-brandGreen-deep text-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="text-brandGold font-black text-xs uppercase tracking-widest bg-brandGreen px-4 py-1.5 rounded-full border border-brandGold/30">معرض الصور المباشر Live</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white mt-4 mb-3">لقطات حية من فعاليات القلعة الخضراء</h2>
+                    <p class="text-brandCream-light/80 text-sm sm:text-base">استعرض صور تجهيزات الكوشات، فريق التقديم والضيافة، وأجواء الفعاليات. اضغط على أي صورة للتكبير!</p>
+                </div>
+
+                <!-- Gallery Category Filters -->
+                <div class="flex flex-wrap justify-center gap-2.5 mb-10" id="gallery-filters">
+                    <button onclick="filterGallery('all', this)" class="px-5 py-2 rounded-full font-black text-xs sm:text-sm bg-brandGold text-brandGreen-deep shadow-lg transition-all">الكل (10 صور)</button>
+                    <button onclick="filterGallery('decor', this)" class="px-5 py-2 rounded-full font-bold text-xs sm:text-sm bg-brandGreen text-brandGold-light border border-brandGold/30 hover:bg-brandGreen-light transition-all">تجهيز القاعات والديكور 🏛️</button>
+                    <button onclick="filterGallery('hospitality', this)" class="px-5 py-2 rounded-full font-bold text-xs sm:text-sm bg-brandGreen text-brandGold-light border border-brandGold/30 hover:bg-brandGreen-light transition-all">فريق الضيافة والتقديم ☕</button>
+                </div>
+
+                <!-- Local File Loader Button (Helper for viewing phone files locally) -->
+                <div class="mb-8 flex justify-center">
+                    <label class="cursor-pointer bg-brandGreen/80 hover:bg-brandGreen text-brandGold border border-brandGold/40 hover:border-brandGold px-5 py-2.5 rounded-xl text-xs font-bold transition-colors flex items-center gap-2 shadow-md">
+                        <i class="fa-solid fa-folder-open text-brandGold"></i>
+                        <span>إذا كنت تستعرض الملف محلياً: اضغط هنا لاختيار صورك من الهاتف</span>
+                        <input type="file" id="local-image-picker" multiple accept="image/*" class="hidden" onchange="handleLocalImages(this)">
+                    </label>
+                </div>
+
+                <!-- Live Gallery Grid (10 Uploaded Images) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="gallery-grid">
+                    
+                    <!-- Photo 1 (Decor) -->
+                    <div class="gallery-card decor bg-brandGreen/80 rounded-2xl overflow-hidden border border-brandGold/30 shadow-xl group flex flex-col justify-between">
+                        <div class="relative h-64 overflow-hidden gallery-img-container cursor-pointer" onclick="openLightbox(0)">
+                            <img src="354884.jpg" alt="تجهيز الكوشة والستائر والستائر المضيئة" class="w-full h-full object-cover" onerror="handleImageError(this, 'تجهيز الكوشة والديكور الاحمر المضيء')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-bold text-brandGold flex items-center gap-1"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط لتكبير الصورة</span>
+                            </div>
+                            <span class="absolute top-3 right-3 bg-brandGreen-deep/90 border border-brandGold/40 text-brandGold text-[10px] font-bold px-2.5 py-1 rounded-full">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i> كوشة وديكور
+                            </span>
+                        </div>
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-sm font-bold text-white">تجهيز الكوشة والديكور الملكي المضيء</h3>
+                            <p class="text-[11px] text-brandCream-light/70">لمسات خلفية بالستائر الحمراء مع الممرات المضيئة والنباتات الزاهية.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2 (Hospitality) -->
+                    <div class="gallery-card hospitality bg-brandGreen/80 rounded-2xl overflow-hidden border border-brandGold/30 shadow-xl group flex flex-col justify-between">
+                        <div class="relative h-64 overflow-hidden gallery-img-container cursor-pointer" onclick="openLightbox(1)">
+                            <img src="354886.jpg" alt="كادر التقديم والإشراف الداخلي" class="w-full h-full object-cover" onerror="handleImageError(this, 'إشراف كادر التقديم في القاعة')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-bold text-brandGold flex items-center gap-1"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط لتكبير الصورة</span>
+                            </div>
+                            <span class="absolute top-3 right-3 bg-emerald-800/90 border border-brandGold/40 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
+                                <i class="fa-solid fa-user-tie"></i> إشراف وتنظيم
+                            </span>
+                        </div>
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-sm font-bold text-white">إشراف وتوجيه كادر الفعالية</h3>
+                            <p class="text-[11px] text-brandCream-light/70">متابعة دقيقة لكل طاولة لضمان تقديم الخدمات بسلاسة كاملة.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3 (Hospitality) -->
+                    <div class="gallery-card hospitality bg-brandGreen/80 rounded-2xl overflow-hidden border border-brandGold/30 shadow-xl group flex flex-col justify-between">
+                        <div class="relative h-64 overflow-hidden gallery-img-container cursor-pointer" onclick="openLightbox(2)">
+                            <img src="354891.jpg" alt="تقديم المشروبات بابتسامة وزي موحد" class="w-full h-full object-cover" onerror="handleImageError(this, 'فريق الضيافة بقمصان القلعة الخضراء')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-bold text-brandGold flex items-center gap-1"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط لتكبير الصورة</span>
+                            </div>
+                            <span class="absolute top-3 right-3 bg-brandGreen-deep/90 border border-brandGold/40 text-brandGold text-[10px] font-bold px-2.5 py-1 rounded-full">
+                                <i class="fa-solid fa-shirt"></i> زي الشركة الموحد
+                            </span>
+                        </div>
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-sm font-bold text-white">تقديم المشروبات بزي الشركة الموحد</h3>
+                            <p class="text-[11px] text-brandCream-light/70">قمصان بترولية مطبوع عليها شعار القلعة الخضراء مع قفازات نظيفة.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4 (Hospitality) -->
+                    <div class="gallery-card hospitality bg-brandGreen/80 rounded-2xl overflow-hidden border border-brandGold/30 shadow-xl group flex flex-col justify-between">
+                        <div class="relative h-64 overflow-hidden gallery-img-container cursor-pointer" onclick="openLightbox(3)">
+                            <img src="354892.jpg" alt="ترتيب وتنسيق طاولات الطعام" class="w-full h-full object-cover" onerror="handleImageError(this, 'فريق تقديم الطعام على الطاولات')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-bold text-brandGold flex items-center gap-1"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط لتكبير الصورة</span>
+                            </div>
+                            <span class="absolute top-3 right-3 bg-brandGreen-deep/90 border border-brandGold/40 text-brandGold text-[10px] font-bold px-2.5 py-1 rounded-full">
+                                <i class="fa-solid fa-utensils"></i> خدمة الطاولات
+                            </span>
+                        </div>
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-sm font-bold text-white">ترتيب السرافيس على الطاولات</h3>
+                            <p class="text-[11px] text-brandCream-light/70">اهتمام بالتفاصيل أثناء تقديم المأكولات للضيوف الكرام.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5 (Hospitality Outdoor) -->
+                    <div class="gallery-card hospitality bg-brandGreen/80 rounded-2xl overflow-hidden border border-brandGold/30 shadow-xl group flex flex-col justify-between">
+                        <div class="relative h-64 overflow-hidden gallery-img-container cursor-pointer" onclick="openLightbox(4)">
+                            <img src="354904.jpg" alt="تجهيز وجبات الفعالية الخارجية" class="w-full h-full object-cover" onerror="handleImageError(this, 'تجهيز الوجبات في الصيوان والفعاليات الخارجية')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-bold text-brandGold flex items-center gap-1"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط لتكبير الصورة</span>
+                            </div>
+                            <span class="absolute top-3 right-3 bg-red-800/90 border border-brandGold/40 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
+                                <i class="fa-solid fa-campground"></i> صيوانات وفعاليات خارجية
+                            </span>
+                        </div>
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-sm font-bold text-white">تنسيق الوجبات بالزي الأحمر الحماسي</h3>
+                            <p class="text-[11px] text-brandCream-light/70">خدمة الفعاليات الخارجية والصيوانات بكوادر نشيطة ومجهزة بالكامل.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 6 (Hospitality) -->
+                    <div class="gallery-card hospitality bg-brandGreen/80 rounded-2xl overflow-hidden border border-brandGold/30 shadow-xl group flex flex-col justify-between">
+                        <div class="relative h-64 overflow-hidden gallery-img-container cursor-pointer" onclick="openLightbox(5)">
+                            <img src="354895.jpg" alt="فريق الضيافة الميداني في المهرجانات" class="w-full h-full object-cover" onerror="handleImageError(this, 'فريق الضيافة الميداني')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-bold text-brandGold flex items-center gap-1"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط لتكبير الصورة</span>
+                            </div>
+                            <span class="absolute top-3 right-3 bg-red-800/90 border border-brandGold/40 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
+                                <i class="fa-solid fa-person-running"></i> نشاط ميداني
+                            </span>
+                        </div>
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-sm font-bold text-white">سرعة الاستجابة وخدمة الحضور</h3>
+                            <p class="text-[11px] text-brandCream-light/70">توزيع الأدوار وسرعة حركة شباب القلعة الخضراء.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 7 (Traditional Food) -->
+                    <div class="gallery-card hospitality bg-brandGreen/80 rounded-2xl overflow-hidden border border-brandGold/30 shadow-xl group flex flex-col justify-between">
+                        <div class="relative h-64 overflow-hidden gallery-img-container cursor-pointer" onclick="openLightbox(6)">
+                            <img src="354894.jpg" alt="تقديم المأكولات السودانية والأكل البلدي" class="w-full h-full object-cover" onerror="handleImageError(this, 'تقديم العصيدة والمأكولات السودانية')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-bold text-brandGold flex items-center gap-1"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط لتكبير الصورة</span>
+                            </div>
+                            <span class="absolute top-3 right-3 bg-brandGold text-brandGreen-deep text-[10px] font-black px-2.5 py-1 rounded-full">
+                                <i class="fa-solid fa-bowl-food"></i> ضيافة سودانية أصيلة
+                            </span>
+                        </div>
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-sm font-bold text-white">تقديم المأكولات الشعبية السودانية</h3>
+                            <p class="text-[11px] text-brandCream-light/70">أصالة الضيافة مع ترتيب ممتاذ ونظيف للغاية.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 8 (Serving Tray) -->
+                    <div class="gallery-card hospitality bg-brandGreen/80 rounded-2xl overflow-hidden border border-brandGold/30 shadow-xl group flex flex-col justify-between">
+                        <div class="relative h-64 overflow-hidden gallery-img-container cursor-pointer" onclick="openLightbox(7)">
+                            <img src="354889.jpg" alt="حمل الصواني الكبيرة باحترافية" class="w-full h-full object-cover" onerror="handleImageError(this, 'حمل صواني الضيافة الكبيرة')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-bold text-brandGold flex items-center gap-1"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط لتكبير الصورة</span>
+                            </div>
+                            <span class="absolute top-3 right-3 bg-brandGreen-deep/90 border border-brandGold/40 text-brandGold text-[10px] font-bold px-2.5 py-1 rounded-full">
+                                <i class="fa-solid fa-hands-holding text-brandGold"></i> مهارة تقديم
+                            </span>
+                        </div>
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-sm font-bold text-white">حمل صواني الضيافة الثقيلة باحتراف</h3>
+                            <p class="text-[11px] text-brandCream-light/70">قوة ومهارات ميدانية لخدمة أعداد الزوار الغفيرة.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 9 (Water Service) -->
+                    <div class="gallery-card hospitality bg-brandGreen/80 rounded-2xl overflow-hidden border border-brandGold/30 shadow-xl group flex flex-col justify-between">
+                        <div class="relative h-64 overflow-hidden gallery-img-container cursor-pointer" onclick="openLightbox(8)">
+                            <img src="354887.jpg" alt="تقديم المياه الباردة للضيوف" class="w-full h-full object-cover" onerror="handleImageError(this, 'توزيع المياه الباردة للضيوف')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-bold text-brandGold flex items-center gap-1"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط لتكبير الصورة</span>
+                            </div>
+                            <span class="absolute top-3 right-3 bg-blue-700/90 border border-brandGold/40 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
+                                <i class="fa-solid fa-glass-water"></i> ضيافة المشروبات
+                            </span>
+                        </div>
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-sm font-bold text-white">توزيع المياه والمشروبات الباردة</h3>
+                            <p class="text-[11px] text-brandCream-light/70">ضيافة مستمرة طوال فترة الحفل بدون انقطاع.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 10 (Outdoor Tray Prep) -->
+                    <div class="gallery-card hospitality bg-brandGreen/80 rounded-2xl overflow-hidden border border-brandGold/30 shadow-xl group flex flex-col justify-between">
+                        <div class="relative h-64 overflow-hidden gallery-img-container cursor-pointer" onclick="openLightbox(9)">
+                            <img src="354903.jpg" alt="تجهيز صواني العريس والمناسبات" class="w-full h-full object-cover" onerror="handleImageError(this, 'تنسيق صواني الضيافة للضيوف')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-bold text-brandGold flex items-center gap-1"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط لتكبير الصورة</span>
+                            </div>
+                            <span class="absolute top-3 right-3 bg-red-800/90 border border-brandGold/40 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
+                                <i class="fa-solid fa-plate-wheat"></i> تجهيز السرافيس
+                            </span>
+                        </div>
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-sm font-bold text-white">تنسيق السرافيس لكرنفالات الهواء الطلق</h3>
+                            <p class="text-[11px] text-brandCream-light/70">دقة متناهية في الترتيب الميداني قبل وصول الضيوف.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Facebook Media Showcase Section -->
+        <section id="portfolio" class="py-20 bg-pattern relative border-t border-brandGold/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-brandGreen font-black text-xs uppercase tracking-widest bg-brandCream px-4 py-1.5 rounded-full border border-brandGold/40">روابط المنشورات الرسمية</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-brandGreen-deep mt-4 mb-4">أعمال القلعة الخضراء على فيسبوك</h2>
+                    <p class="text-gray-600 text-base">استعرض جميع منشوراتنا وفيديوهاتنا الأصلية المنتشرة على منصة فيسبوك.</p>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12" id="portfolio-tabs">
+                    <button onclick="filterPortfolio('all', this)" class="px-6 py-2.5 rounded-full font-black text-xs sm:text-sm bg-brandGold text-brandGreen-deep shadow-lg transition-all">الكل (7 منشورات)</button>
+                    <button onclick="filterPortfolio('video', this)" class="px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm bg-brandGreen text-brandGold-light border border-brandGold/30 hover:bg-brandGreen-light transition-all">فيديوهات وريلز 🎬</button>
+                    <button onclick="filterPortfolio('post', this)" class="px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm bg-brandGreen text-brandGold-light border border-brandGold/30 hover:bg-brandGreen-light transition-all">منشورات وصور 📸</button>
+                </div>
+
+                <!-- Showcase Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                    
+                    <!-- Item 1 -->
+                    <div class="portfolio-card post bg-white rounded-2xl overflow-hidden gold-border shadow-xl hover:shadow-2xl transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="relative h-48 bg-brandGreen-deep flex items-center justify-center p-4">
+                                <i class="fa-solid fa-images text-5xl text-brandGold group-hover:scale-110 transition-transform"></i>
+                                <span class="absolute top-3 right-3 bg-brandGreen border border-brandGold/40 text-brandGold text-[11px] font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-newspaper"></i> منشور وصور
+                                </span>
+                            </div>
+                            <div class="p-6 space-y-2">
+                                <h3 class="text-lg font-bold text-brandGreen-deep group-hover:text-brandGold transition-colors">تغطية فعاليات وزفات القلعة الخضراء</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    لقطات مصورة توضح أسلوب التنظيم من لحظة نزول العرسان وحتى تفاصيل الفال السعيدة.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://www.facebook.com/share/p/1CV3wU1i2M/" target="_blank" rel="noopener" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition-colors">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span>مشاهدة المنشور على فيسبوك</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="portfolio-card video bg-white rounded-2xl overflow-hidden gold-border shadow-xl hover:shadow-2xl transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="relative h-48 bg-brandGreen-deep flex items-center justify-center p-4">
+                                <i class="fa-solid fa-film text-5xl text-brandGold group-hover:scale-110 transition-transform"></i>
+                                <span class="absolute top-3 right-3 bg-purple-600 text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-bolt"></i> ريلز استعراضي
+                                </span>
+                            </div>
+                            <div class="p-6 space-y-2">
+                                <h3 class="text-lg font-bold text-brandGreen-deep group-hover:text-brandGold transition-colors">لقطات حية لدخوليات العرسان والزفة</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    مقطع ريلز سريع يبرز التناسق الاستعراضي والمؤثرات الصوتية والضوئية المرافقة للدخول.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://www.facebook.com/share/r/1ALYWPWCVN/" target="_blank" rel="noopener" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition-colors">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span>مشاهدة الريلز على فيسبوك</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="portfolio-card video bg-white rounded-2xl overflow-hidden gold-border shadow-xl hover:shadow-2xl transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="relative h-48 bg-brandGreen-deep flex items-center justify-center p-4">
+                                <i class="fa-solid fa-circle-play text-5xl text-brandGold group-hover:scale-125 transition-transform"></i>
+                                <span class="absolute top-3 right-3 bg-red-600 text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-video"></i> فيديو كامل
+                                </span>
+                            </div>
+                            <div class="p-6 space-y-2">
+                                <h3 class="text-lg font-bold text-brandGreen-deep group-hover:text-brandGold transition-colors">عرض كامل لتنظيم الكرنفالات والاحتفالات</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    فيديو شامل يغطي أجواء المهرجانات والمسارح وتفاعل الجماهير مع كادر القلعة الخضراء.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://www.facebook.com/share/v/19Xh2yMNMg/" target="_blank" rel="noopener" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition-colors">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span>مشاهدة الفيديو على فيسبوك</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="portfolio-card post bg-white rounded-2xl overflow-hidden gold-border shadow-xl hover:shadow-2xl transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="relative h-48 bg-brandGreen-deep flex items-center justify-center p-4">
+                                <i class="fa-solid fa-graduation-cap text-5xl text-brandGold group-hover:scale-110 transition-transform"></i>
+                                <span class="absolute top-3 right-3 bg-brandGreen border border-brandGold/40 text-brandGold text-[11px] font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-newspaper"></i> منشور خريجين
+                                </span>
+                            </div>
+                            <div class="p-6 space-y-2">
+                                <h3 class="text-lg font-bold text-brandGreen-deep group-hover:text-brandGold transition-colors">عروض خاصة للخريجين وأفكار مبتكرة</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    أفكار دخوليات تخريج ومسيرات تفاعلية تضمن يوم فرح خيالي لجميع الطلاب والكليات.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://www.facebook.com/share/p/1PzUZUcNGG/" target="_blank" rel="noopener" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition-colors">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span>مشاهدة المنشور على فيسبوك</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="portfolio-card post bg-white rounded-2xl overflow-hidden gold-border shadow-xl hover:shadow-2xl transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="relative h-48 bg-brandGreen-deep flex items-center justify-center p-4">
+                                <i class="fa-solid fa-wand-magic-sparkles text-5xl text-brandGold group-hover:scale-110 transition-transform"></i>
+                                <span class="absolute top-3 right-3 bg-brandGreen border border-brandGold/40 text-brandGold text-[11px] font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-newspaper"></i> منشور ديكورات
+                                </span>
+                            </div>
+                            <div class="p-6 space-y-2">
+                                <h3 class="text-lg font-bold text-brandGreen-deep group-hover:text-brandGold transition-colors">تجهيزات الديكور والإضاءة والمداخل</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    استعراض لتصميم الكوشات والممرات والإضاءات الساحرة التي تزين قاعات الفعاليات.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://www.facebook.com/share/p/1dWT6Zu78T/" target="_blank" rel="noopener" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition-colors">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span>مشاهدة المنشور على فيسبوك</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="portfolio-card post bg-white rounded-2xl overflow-hidden gold-border shadow-xl hover:shadow-2xl transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="relative h-48 bg-brandGreen-deep flex items-center justify-center p-4">
+                                <i class="fa-solid fa-crown text-5xl text-brandGold group-hover:scale-110 transition-transform"></i>
+                                <span class="absolute top-3 right-3 bg-brandGreen border border-brandGold/40 text-brandGold text-[11px] font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-newspaper"></i> منشور زفة
+                                </span>
+                            </div>
+                            <div class="p-6 space-y-2">
+                                <h3 class="text-lg font-bold text-brandGreen-deep group-hover:text-brandGold transition-colors">باقات الزفة الملكية من العربية للفال</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    شاهد سيناريو الاستقبال والاستعراضات المخصصة لعرسان القلعة الخضراء.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://www.facebook.com/share/p/1E2HmsLVwP/" target="_blank" rel="noopener" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition-colors">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span>مشاهدة المنشور على فيسبوك</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="portfolio-card post bg-white rounded-2xl overflow-hidden gold-border shadow-xl hover:shadow-2xl transition-all flex flex-col justify-between group md:col-span-2 lg:col-span-1">
+                        <div>
+                            <div class="relative h-48 bg-brandGreen-deep flex items-center justify-center p-4">
+                                <i class="fa-solid fa-heart text-5xl text-brandGold group-hover:scale-110 transition-transform"></i>
+                                <span class="absolute top-3 right-3 bg-brandGreen border border-brandGold/40 text-brandGold text-[11px] font-bold px-3 py-1 rounded-full">
+                                    <i class="fa-solid fa-newspaper"></i> منشور آراء العملاء
+                                </span>
+                            </div>
+                            <div class="p-6 space-y-2">
+                                <h3 class="text-lg font-bold text-brandGreen-deep group-hover:text-brandGold transition-colors">آراء العملاء ولحظات لا تُنسى</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    انطباعات زبائننا الكرام وأصدق العبارات حول فخامة التنظيم والالتزام التام.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://www.facebook.com/share/p/1CXYNmaDut/" target="_blank" rel="noopener" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition-colors">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span>مشاهدة المنشور على فيسبوك</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Smart Interactive WhatsApp Booking Form -->
+        <section id="booking" class="py-20 bg-pattern relative">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="bg-white rounded-3xl shadow-2xl p-6 sm:p-10 gold-border relative overflow-hidden">
+                    
+                    <div class="absolute top-0 left-0 right-0 h-3 bg-gradient-to-r from-brandGreen-deep via-brandGold to-brandGreen-deep"></div>
+
+                    <div class="text-center mb-8">
+                        <span class="text-brandGreen font-black text-xs uppercase tracking-widest bg-brandCream px-4 py-1 rounded-full border border-brandGold/30">حجز موعد مباشر</span>
+                        <h2 class="text-2xl sm:text-3xl font-black text-brandGreen-deep mt-3">نموذج حجز الفعالية المباشر</h2>
+                        <p class="text-gray-600 text-sm mt-2">حدد بيانات مناسبتك وسيتم تحويلك تلقائياً برسالة منسقة إلى واتساب القلعة الخضراء!</p>
+                    </div>
+
+                    <form onsubmit="sendWhatsAppBooking(event)" class="space-y-5">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            
+                            <!-- Name -->
+                            <div>
+                                <label for="cust-name" class="block text-xs font-bold text-brandGreen-deep mb-2">اسم صاحب الحجز <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-brandGreen">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                    <input type="text" id="cust-name" required placeholder="مثال: محمد أحمد" class="w-full pr-10 pl-4 py-3 text-sm rounded-xl border border-gray-300 focus:border-brandGreen focus:ring-2 focus:ring-brandGreen/20 outline-none transition-all">
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div>
+                                <label for="cust-phone" class="block text-xs font-bold text-brandGreen-deep mb-2">رقم التواصل / الواتساب <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-brandGreen">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <input type="tel" id="cust-phone" required placeholder="09XXXXXXX" class="w-full pr-10 pl-4 py-3 text-sm rounded-xl border border-gray-300 focus:border-brandGreen focus:ring-2 focus:ring-brandGreen/20 outline-none transition-all dir-ltr text-right">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            
+                            <!-- Service Type -->
+                            <div>
+                                <label for="event-type" class="block text-xs font-bold text-brandGreen-deep mb-2">نوع الخدمة / المناسبة <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-brandGreen">
+                                        <i class="fa-solid fa-crown"></i>
+                                    </div>
+                                    <select id="event-type" required class="w-full pr-10 pl-4 py-3 text-sm rounded-xl border border-gray-300 focus:border-brandGreen focus:ring-2 focus:ring-brandGreen/20 outline-none transition-all appearance-none bg-white font-bold">
+                                        <option value="زفة ملكية متكاملة (عرسان)">زفة ملكية متكاملة (عرسان)</option>
+                                        <option value="حفل تخريج دُفعة / كلية">حفل تخريج دُفعة / كلية</option>
+                                        <option value="فريق الضيافة والتقديم والوجبات">فريق الضيافة والتقديم والوجبات</option>
+                                        <option value="تجهيز الكوشة والديكورات والصوتيات">تجهيز الكوشة والديكورات والصوتيات</option>
+                                        <option value="تنظيم كرنفال أو مهرجان جماهيري">تنظيم كرنفال أو مهرجان جماهيري</option>
+                                        <option value="مناسبة خاصة / أخرى">مناسبة خاصة / أخرى</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- City -->
+                            <div>
+                                <label for="event-location" class="block text-xs font-bold text-brandGreen-deep mb-2">المدينة / موقع الفعالية <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-brandGreen">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <input type="text" id="event-location" required placeholder="الخرطوم، بورتسودان، كسلا، عطبرة..." class="w-full pr-10 pl-4 py-3 text-sm rounded-xl border border-gray-300 focus:border-brandGreen focus:ring-2 focus:ring-brandGreen/20 outline-none transition-all">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Date -->
+                        <div>
+                            <label for="event-date" class="block text-xs font-bold text-brandGreen-deep mb-2">تاريخ المناسبة المتوقع</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-brandGreen">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </div>
+                                <input type="date" id="event-date" class="w-full pr-10 pl-4 py-3 text-sm rounded-xl border border-gray-300 focus:border-brandGreen focus:ring-2 focus:ring-brandGreen/20 outline-none transition-all bg-white">
+                            </div>
+                        </div>
+
+                        <!-- Details -->
+                        <div>
+                            <label for="event-notes" class="block text-xs font-bold text-brandGreen-deep mb-2">تفاصيل أو أفكار خاصة تحب إضافتها</label>
+                            <textarea id="event-notes" rows="3" placeholder="اكتب لنا أعداد الضيوف المتوقعة أو أي تفاصيل تخص الكوشة والتقديم..." class="w-full p-4 text-sm rounded-xl border border-gray-300 focus:border-brandGreen focus:ring-2 focus:ring-brandGreen/20 outline-none transition-all"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-gradient-to-r from-brandGreen-deep via-brandGreen to-brandGreen-deep hover:from-brandGreen hover:to-brandGreen-deep text-brandGold font-black text-base py-4 rounded-xl shadow-xl hover:shadow-brand transition-all flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-2xl text-emerald-400"></i>
+                            <span>إرسال طلب الحجز المباشر عبر واتساب</span>
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Direct Contact Hub Section -->
+        <section id="contact" class="py-16 bg-brandGreen-deep text-white border-t border-brandGold/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-black text-white">تواصل معنا الآن</h2>
+                    <p class="text-brandGold-light text-sm mt-2">طاقم القلعة الخضراء يسعد باستقبال اتصالاتكم ورسائلكم طوال اليوم</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                    
+                    <!-- Phone Contact -->
+                    <div class="bg-brandGreen/90 rounded-2xl p-6 border border-brandGold/30 text-center flex flex-col items-center justify-between space-y-4">
+                        <div class="w-14 h-14 rounded-full bg-brandGreen-deep text-brandGold flex items-center justify-center text-2xl shadow-inner border border-brandGold/20">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white">الاتصال الهاتفي المباشر</h3>
+                            <p class="text-xs text-brandCream-light/70 mt-1">للحجوزات الفورية والاستفسارات العاجلة</p>
+                            <p class="text-2xl font-mono font-black text-brandGold mt-3 dir-ltr">0117562966</p>
+                        </div>
+                        <div class="flex items-center gap-2 w-full pt-2">
+                            <a href="tel:+249117562966" class="flex-1 bg-brandGreen-deep hover:bg-brandGreen text-white font-bold py-2.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-2 border border-brandGold/30">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>اتصال تلفوني</span>
+                            </a>
+                            <button onclick="copyToClipboard('0117562966', 'تم نسخ رقم الاتصال: 0117562966')" class="bg-brandGreen-deep hover:bg-brandGreen text-brandGold p-2.5 rounded-xl text-xs border border-brandGold/30" title="نسخ الرقم">
+                                <i class="fa-solid fa-copy text-base"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Contact -->
+                    <div class="bg-brandGreen/90 rounded-2xl p-6 border border-brandGold/30 text-center flex flex-col items-center justify-between space-y-4">
+                        <div class="w-14 h-14 rounded-full bg-brandGreen-deep text-emerald-400 flex items-center justify-center text-2xl shadow-inner border border-brandGold/20">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white">محادثة الواتساب الرسمية</h3>
+                            <p class="text-xs text-brandCream-light/70 mt-1">لاستلام الصور، العروض، وتنسيق الأفكار</p>
+                            <p class="text-2xl font-mono font-black text-brandGold mt-3 dir-ltr">0909373837</p>
+                        </div>
+                        <div class="flex items-center gap-2 w-full pt-2">
+                            <a href="https://wa.me/249909373837" target="_blank" class="flex-1 bg-emerald-700 hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>محادثة واتساب</span>
+                            </a>
+                            <button onclick="copyToClipboard('0909373837', 'تم نسخ رقم الواتساب: 0909373837')" class="bg-brandGreen-deep hover:bg-brandGreen text-brandGold p-2.5 rounded-xl text-xs border border-brandGold/30" title="نسخ الرقم">
+                                <i class="fa-solid fa-copy text-base"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brandGreen-deep text-brandCream-light py-8 border-t border-brandGreen text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-brandCream p-0.5 flex items-center justify-center border border-brandGold">
+                    <img src="354907.jpg" alt="القلعة الخضراء" class="w-full h-full object-contain rounded-full" onerror="this.classList.add('hidden')">
+                </div>
+                <div>
+                    <span class="font-bold text-white text-sm">القلعة الخضراء</span>
+                    <span class="text-brandGold block text-[10px]">تنظيم الكرنفالات والاحتفالات - السودان</span>
+                </div>
+            </div>
+
+            <p class="text-center text-gray-300">
+                جميع الحقوق محفوظة &copy; <span id="year"></span> | القلعة الخضراء لتنظيم المناسبات
+            </p>
+
+            <div class="flex items-center gap-4 text-lg text-brandGold">
+                <a href="https://wa.me/249909373837" target="_blank" class="hover:text-white transition-colors" title="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/share/p/1CV3wU1i2M/" target="_blank" class="hover:text-white transition-colors" title="فيسبوك"><i class="fa-brands fa-facebook"></i></a>
+                <a href="tel:+249117562966" class="hover:text-white transition-colors" title="اتصال"><i class="fa-solid fa-phone"></i></a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Floating Sticky Quick Action WhatsApp Button -->
+    <a href="https://wa.me/249909373837?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A7%D9%84%D9%82%D9%84%D8%B9%D8%A9%20%D8%A7%D9%84%D8%AE%D8%B6%D8%B1%D8%A7%D8%A1%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AD%D8%AC%D8%B2%20%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1" 
+       target="_blank" 
+       rel="noopener"
+       aria-label="تواصل واتساب"
+       class="fixed bottom-6 left-6 z-40 bg-emerald-600 hover:bg-emerald-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl transition-transform hover:scale-110 pulse-ring">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Interactivity JavaScript -->
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark';
+            }
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars';
+            });
+        });
+
+        // Smooth Scroll Helper
+        function scrollToBooking() {
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Image Fallback Handling with Gradient Placeholders
+        function handleImageError(imgElem, labelText) {
+            const parent = imgElem.parentElement;
+            imgElem.style.display = 'none';
+            
+            let fallbackDiv = parent.querySelector('.fallback-placeholder');
+            if (!fallbackDiv) {
+                fallbackDiv = document.createElement('div');
+                fallbackDiv.className = 'fallback-placeholder absolute inset-0 bg-gradient-to-br from-brandGreen-deep via-brandGreen to-emerald-950 flex flex-col items-center justify-center p-4 text-center text-brandGold';
+                fallbackDiv.innerHTML = `
+                    <i class="fa-solid fa-image text-4xl mb-2 text-brandGold/70"></i>
+                    <span class="text-xs font-bold text-white">${labelText}</span>
+                    <span class="text-[10px] text-brandGold-light mt-1">القلعة الخضراء لتنظيم المناسبات</span>
+                `;
+                parent.appendChild(fallbackDiv);
+            }
+        }
+
+        // Local Image Preview Selector (Helper for mobile local files)
+        function handleLocalImages(input) {
+            if (input.files && input.files.length > 0) {
+                const galleryImgs = document.querySelectorAll('#gallery-grid img');
+                Array.from(input.files).forEach((file, index) => {
+                    if (index < galleryImgs.length) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            galleryImgs[index].src = e.target.result;
+                            galleryImgs[index].style.display = 'block';
+                            const placeholder = galleryImgs[index].parentElement.querySelector('.fallback-placeholder');
+                            if (placeholder) placeholder.remove();
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                });
+                showToast(`تم تحميل ${input.files.length} صورة لمعاينتها بنجاح!`);
+            }
+        }
+
+        // Lightbox Modal Logic
+        let currentLightboxIndex = 0;
+        const galleryImages = [
+            { src: '354884.jpg', caption: 'تجهيز الكوشة والديكور الأحمر المضيء' },
+            { src: '354886.jpg', caption: 'إشراف وتوجيه كادر الفعالية في القاعة' },
+            { src: '354891.jpg', caption: 'تقديم المشروبات بزي الشركة الموحد' },
+            { src: '354892.jpg', caption: 'ترتيب وتنسيق السرافيس على الطاولات' },
+            { src: '354904.jpg', caption: 'تنسيق وجبات الفعاليات الخارجية والصيوانات' },
+            { src: '354895.jpg', caption: 'نشاط كادر الضيافة الميداني في المهرجانات' },
+            { src: '354894.jpg', caption: 'تقديم المأكولات السودانية الشعبية والأكل البلدي' },
+            { src: '354889.jpg', caption: 'حمل صواني الضيافة الكبيرة باحترافية' },
+            { src: '354887.jpg', caption: 'توزيع المياه والمشروبات الباردة للضيوف' },
+            { src: '354903.jpg', caption: 'تنسيق صواني العريس والسرافيس للضيوف' }
+        ];
+
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            updateLightboxView();
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateLightboxView() {
+            const item = galleryImages[currentLightboxIndex];
+            const imgElem = document.getElementById('lightbox-img');
+            const counterElem = document.getElementById('lightbox-counter');
+            const captionElem = document.getElementById('lightbox-caption');
+            const waBtn = document.getElementById('lightbox-wa-btn');
+
+            // Find if local image preview exists
+            const domImg = document.querySelectorAll('#gallery-grid img')[currentLightboxIndex];
+            if (domImg && domImg.src && domImg.src.startsWith('data:image')) {
+                imgElem.src = domImg.src;
+            } else {
+                imgElem.src = item.src;
+            }
+
+            counterElem.textContent = `${currentLightboxIndex + 1} / ${galleryImages.length}`;
+            captionElem.textContent = item.caption;
+
+            const text = encodeURIComponent(`مرحباً القلعة الخضراء، أعجبني هذا العرض: (${item.caption}) وأرغب في استفسار عن تكلفة تنظيمه.`);
+            waBtn.href = `https://wa.me/249909373837?text=${text}`;
+        }
+
+        function nextLightboxImg() {
+            currentLightboxIndex = (currentLightboxIndex + 1) % galleryImages.length;
+            updateLightboxView();
+        }
+
+        function prevLightboxImg() {
+            currentLightboxIndex = (currentLightboxIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateLightboxView();
+        }
+
+        // Gallery Filter
+        function filterGallery(category, btnElement) {
+            const cards = document.querySelectorAll('.gallery-card');
+            const tabs = document.querySelectorAll('#gallery-filters button');
+
+            tabs.forEach(tab => {
+                tab.className = "px-5 py-2 rounded-full font-bold text-xs sm:text-sm bg-brandGreen text-brandGold-light border border-brandGold/30 hover:bg-brandGreen-light transition-all";
+            });
+
+            btnElement.className = "px-5 py-2 rounded-full font-black text-xs sm:text-sm bg-brandGold text-brandGreen-deep shadow-lg transition-all";
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Facebook Portfolio Filter
+        function filterPortfolio(category, btnElement) {
+            const cards = document.querySelectorAll('.portfolio-card');
+            const tabs = document.querySelectorAll('#portfolio-tabs button');
+
+            tabs.forEach(tab => {
+                tab.className = "px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm bg-brandGreen text-brandGold-light border border-brandGold/30 hover:bg-brandGreen-light transition-all";
+            });
+
+            btnElement.className = "px-6 py-2.5 rounded-full font-black text-xs sm:text-sm bg-brandGold text-brandGreen-deep shadow-lg transition-all";
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Toast Notification System
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = msg;
+
+            toast.classList.remove('opacity-0', '-translate-y-20', 'pointer-events-none');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', '-translate-y-20', 'pointer-events-none');
+            }, 3000);
+        }
+
+        // Clipboard Copy
+        function copyToClipboard(text, alertMsg) {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast(alertMsg);
+                }).catch(() => {
+                    fallbackCopy(text, alertMsg);
+                });
+            } else {
+                fallbackCopy(text, alertMsg);
+            }
+        }
+
+        function fallbackCopy(text, alertMsg) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-9999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast(alertMsg);
+            } catch (err) {
+                showToast("الرقم: " + text);
+            }
+            document.body.removeChild(textArea);
+        }
+
+        // WhatsApp Booking Form Submission
+        function sendWhatsAppBooking(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('cust-name').value.trim();
+            const phone = document.getElementById('cust-phone').value.trim();
+            const type = document.getElementById('event-type').value;
+            const location = document.getElementById('event-location').value.trim();
+            const date = document.getElementById('event-date').value;
+            const notes = document.getElementById('event-notes').value.trim();
+
+            let message = `*طلب حجز جديد - القلعة الخضراء* 🏰✨\n\n`;
+            message += `👤 *الاسم الكريم:* ${name}\n`;
+            message += `📞 *رقم التواصل:* ${phone}\n`;
+            message += `🎉 *نوع المناسبة/الخدمة:* ${type}\n`;
+            message += `📍 *المكان/المدينة:* ${location}\n`;
+            
+            if (date) {
+                message += `📅 *التاريخ المتوقع:* ${date}\n`;
+            }
+            if (notes) {
+                message += `📝 *ملاحظات إضافية:* ${notes}\n`;
+            }
+
+            message += `\n---\nتم الإرسال عبر الموقع الرسمي لشركة القلعة الخضراء`;
+
+            const encodedMsg = encodeURIComponent(message);
+            const waUrl = `https://wa.me/249909373837?text=${encodedMsg}`;
+
+            showToast('جاري تحويلك إلى الواتساب...');
+            setTimeout(() => {
+                window.open(waUrl, '_blank');
+            }, 700);
+        }
+    </script>
+</body>
+</html>
+```
